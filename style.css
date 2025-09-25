@@ -1,0 +1,26 @@
+/* General table styling */
+table {
+  width: 80%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+/* Disabled submit button */
+#submitBtn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  color: white;
+}
+
+#submitBtn {
+  background-color: orange;
+  color: white;
+  padding: 8px 15px;
+  margin-left: 10px;
+}

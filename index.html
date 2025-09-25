@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3 - Dynamic Table</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <!-- Requirement 1: Show Name + NUID -->
+  <h2 id="student-info">Laksh Dhamija - 002304211</h2>
+
+  <!-- Buttons -->
+  <button id="addStudentBtn">Add New Student</button>
+  <button id="submitBtn" disabled>Submit</button>
+
+  <!-- Table -->
+  <table id="studentTable" border="1">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Student Name</th>
+        <th>Teacher</th>
+        <th>Expand</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be added dynamically -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
 </body>
 </html>
