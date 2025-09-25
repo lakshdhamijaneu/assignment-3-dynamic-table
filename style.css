@@ -24,3 +24,8 @@ th, td {
   padding: 8px 15px;
   margin-left: 10px;
 }
+
+/* Row highlight */
+.highlight {
+  background-color: yellow;
+}
