@@ -87,7 +87,6 @@ function handleCheckboxChange(checkbox, row, studentNum) {
           row.nextElementSibling.remove();
         }
         row.remove();
-        console.log("BRUHH");
         alert(`Student ${studentNum} Record deleted successfully`);
         renumberStudents();
         checkAnySelected(); // re-check if submit should disable
