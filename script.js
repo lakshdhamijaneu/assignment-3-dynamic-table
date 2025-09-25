@@ -19,10 +19,12 @@ function addStudentRow(num) {
   const row = document.createElement("tr");
 
   row.innerHTML = `
-    <td><input type="checkbox" class="rowCheck"></td>
+    <td>
+      <img src="images/right-arrow.png" alt="expand" class="expandIcon" width="16">
+      <input type="checkbox" class="rowCheck">
+    </td>
     <td>Student ${num}</td>
     <td>Teacher ${num}</td>
-    <td><img src="green-arrow.png" alt="expand" class="expandIcon" width="20"></td>
     <td class="deleteCell"></td>
     <td class="editCell"></td>
   `;
@@ -32,6 +34,25 @@ function addStudentRow(num) {
   const checkbox = row.querySelector(".rowCheck");
   checkbox.addEventListener("change", () => {
     handleCheckboxChange(checkbox, row, num);
+  });
+
+  // Expand/Collapse functionality
+  const expandIcon = row.querySelector(".expandIcon");
+  expandIcon.addEventListener("click", () => {
+    // Check if details row already exists
+    if (row.nextElementSibling && row.nextElementSibling.classList.contains("detailsRow")) {
+      row.nextElementSibling.remove(); // collapse
+      expandIcon.src = "images/right-arrow.png"; // back to right arrow
+    } else {
+      // expand: insert details row
+      const detailsRow = document.createElement("tr");
+      detailsRow.classList.add("detailsRow");
+      detailsRow.innerHTML = `
+        <td colspan="5">Extra details for Student ${num}...</td>
+      `;
+      row.after(detailsRow);
+      expandIcon.src = "images/down-arrow.png"; // change to down arrow
+    }
   });
 
   alert(`Student ${num} Record added successfully`);

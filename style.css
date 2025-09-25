@@ -29,3 +29,8 @@ th, td {
 .highlight {
   background-color: yellow;
 }
+
+.detailsRow td {
+  background: #f9f9f9;
+  font-style: italic;
+}
